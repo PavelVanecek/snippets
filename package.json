@@ -1,0 +1,26 @@
+{
+  "name": "js-quiz",
+  "version": "1.0.0",
+  "description": "JavaScript quiz: test yourself!",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^2.2.1"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://codereview.merck.com/vanecekp/js-quiz"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "test",
+    "quiz"
+  ],
+  "author": "Pavel Vanecek <pavel.vanecek@merck.com>",
+  "license": "private",
+  "private": true
+}
