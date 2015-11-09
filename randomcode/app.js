@@ -1,12 +1,12 @@
 // jQuery.fn.jquery
 // 2.1.2
 
-+function(){
++function() {
   var list = document.body.getElementById('#mylist')
   var items = list.getElementsByTagName('li')
 
   // fetch meeting rooms list and populate it to DOM
-  jQuery.get('/meeting-rooms', function(data){
+  jQuery.get('/meeting-rooms', function(data) {
     var rooms = data.rooms
     for (i = rooms.length; i > 0; i--) {
       var child = document.createElement('li')
@@ -24,8 +24,10 @@
     while (i > 0) {
       i--;
       items
-        .getElementById(calendar.room.id)
+        .getElementById(calendar[i].room.id)
         .addClass('occupied')
     }
   })
 }()
+
+// What if instead of jQuery.get we use xhrLib.get? (see "xhrLib.js")
