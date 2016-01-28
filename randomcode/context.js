@@ -10,10 +10,10 @@ Library.prototype.greet = function() {
 
 // should I use new or not? What is the difference?
 var a = new Library("O'Reilly")
-var b = Library("Jules Verne")
+var b = Library("Jules Verne") // ?
 
 a.greet() // "My document is O'Reilly"
-b.greet() // ?
+// b.greet() // ?
 
 c = {}
 
@@ -21,4 +21,4 @@ function execute(f) {
   return f();
 }
 
-execute(a.greet.bind(a)); // "My document is [object HTMLDocument]"
+execute(a.greet); // "My document is [object HTMLDocument]", why?
