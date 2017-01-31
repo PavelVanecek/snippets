@@ -1,15 +1,20 @@
 // jQuery.fn.jquery
 // 2.1.2
 
-+function() {
-  var list = document.body.getElementById('#mylist')
-  var items = list.getElementsByTagName('li')
+/* globals jQuery: false */
+/* eslint-env browser */
+
+'use strict'
+
+;(function() {
+  const list = document.body.getElementById('#mylist')
+  const items = list.getElementsByTagName('li')
 
   // fetch meeting rooms list and populate it to DOM
-  jQuery.get('/meeting-rooms', function(data) {
-    var rooms = data.rooms
+  jQuery.get('/meeting-rooms', data => {
+    const rooms = data.rooms
     for (i = rooms.length; i > 0; i--) {
-      var child = document.createElement('li')
+      const child = document.createElement('li')
       child.id = rooms[i].id
       child.innerHTML = rooms[i].name
       list.appendChild(child)
@@ -18,16 +23,16 @@
 
   // fetch data from calendar
   // and mark those rooms which are unavailable right now
-  jQuery.get('/calendar/now', function(data) {
+  jQuery.get('/calendar/now', data => {
     calendar = data.calendar
-    var i = calendar.length
+    let i = calendar.length
     while (i > 0) {
-      i--;
+      i--
       items
         .getElementById(calendar[i].room.id)
         .addClass('occupied')
     }
   })
-}()
+}())
 
 // What if instead of jQuery.get we use xhrLib.get? (see "xhrLib.js")
