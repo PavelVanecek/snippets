@@ -1,5 +1,9 @@
 
 // First task
+// - Will it work?
+// - What would you change? To work and/or to be better?
+// - Describe any syntax/language features you recognise from ES 2015
+// - Write a code needed to call sayHelloAfterATime and output result to console so it shows 'Hello Tom'
 
 class greeter {                               // Naming conventions. Classes
 
@@ -27,13 +31,19 @@ class greeter {                               // Naming conventions. Classes
 
 /*
 let app = new greeter(1000)
-app.setName('test')
+app.setName('Tom')
 app.sayHelloAfterATime().then((greet) => console.log(greet))
 */
 
 
 
 // Second task
+// Second task
+// - Describe any syntax/language features you recognise from ES 2015
+// - Write a code needed to call sayHelloToAll so that console shows:
+// Welcome first brave volunteer Tom
+// John
+// Jack
 
 const sayHelloToAll = function(firstName, ...names) {         // Spread operator
 
@@ -46,5 +56,5 @@ const sayHelloToAll = function(firstName, ...names) {         // Spread operator
 }
 
 /*
-sayHelloToAll('tom', 'jack', 'john')
+sayHelloToAll('Tom', 'Jack', 'John')
 */

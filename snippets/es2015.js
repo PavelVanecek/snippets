@@ -1,5 +1,9 @@
 
 // First task
+// - Will it work?
+// - What would you change? To work and/or to be better?
+// - Describe any syntax/language features you recognise from ES 2015
+// - Write a code needed to call sayHelloAfterATime and output result to console so it shows 'Hello Tom'
 
 class greeter {
 
@@ -30,6 +34,12 @@ class greeter {
 
 
 // Second task
+// - Describe any syntax/language features you recognise from ES 2015
+// - Write a code needed to call sayHelloToAll so that console shows:
+// Welcome first brave volunteer Tom
+// John
+// Jack
+
 
 const sayHelloToAll = function(firstName, ...names) {
 
