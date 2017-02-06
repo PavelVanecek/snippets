@@ -5,9 +5,9 @@
 // - Describe any syntax/language features you recognise from ES 2015
 // - Write a code needed to call sayHelloAfterATime and output result to console so it shows 'Hello Tom'
 
-class greeter {                               // Naming conventions. Classes
+class Greeter {                               // Naming conventions. Classes. Pascal case
 
-  init(delay) {                               // Introduce constructor (optional)
+  consrtuctor(delay) {                               // Introduce constructor (optional)
     this.delay = delay
   }
 
@@ -19,9 +19,9 @@ class greeter {                               // Naming conventions. Classes
 
     return new Promise((resolve, reject) => { // ES2015 Promises
 
-      let greeting = 'Hello'                  // Let/const. Const preferable
+      const greeting = 'Hello'                  // Let/const. Const preferable
 
-      setTimeout(function() {                 // Arrow functions, this scope. Will not work in ths case
+      setTimeout(() => {                 // Arrow functions, this scope. Will not work in ths case
         resolve(`${greeting} ${this.name}`)   // String literals
       }, this.delay)
     })
@@ -42,15 +42,15 @@ app.sayHelloAfterATime().then((greet) => console.log(greet))
 // - Describe any syntax/language features you recognise from ES 2015
 // - Write a code needed to call sayHelloToAll so that console shows:
 // Welcome first brave volunteer Tom
-// John
-// Jack
+// Hi John
+// Hi Jack
 
 const sayHelloToAll = function(firstName, ...names) {         // Spread operator
 
   console.log(`Welcome first brave volunteer ${firstName}`)
 
   for (const name of names) {                                 // For of vs forEach vs For in
-    console.log(name)
+    console.log('Hi ' + name)
   }
 
 }

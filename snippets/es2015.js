@@ -37,8 +37,8 @@ class greeter {
 // - Describe any syntax/language features you recognise from ES 2015
 // - Write a code needed to call sayHelloToAll so that console shows:
 // Welcome first brave volunteer Tom
-// John
-// Jack
+// Hi John
+// Hi Jack
 
 
 const sayHelloToAll = function(firstName, ...names) {
@@ -46,7 +46,7 @@ const sayHelloToAll = function(firstName, ...names) {
   console.log(`Welcome first brave volunteer ${firstName}`)
 
   for (const name of names) {
-    console.log(name)
+    console.log('Hi ' + name)
   }
 
 }

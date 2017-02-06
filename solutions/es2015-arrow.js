@@ -12,7 +12,7 @@ class Greeter {
   }
 
   sayHiEventually(callback) {
-    setTimeout(function() {                 // Wrong scope - function / arrow function
+    setTimeout(() => {                      // Wrong scope - function / arrow function
       callback('Hi ' + this.name)
     }, 1000)
   }
